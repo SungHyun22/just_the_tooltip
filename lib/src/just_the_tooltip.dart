@@ -57,6 +57,7 @@ class JustTheTooltip extends StatefulWidget implements JustTheInterface {
     this.shadow,
     this.showWhenUnlinked = false,
     this.scrollController,
+    this.barrierOpacity = 0.3,
   }) : super(key: key);
 
   @override
@@ -152,6 +153,9 @@ class JustTheTooltip extends StatefulWidget implements JustTheInterface {
 
   @override
   final ScrollController? scrollController;
+
+  @override
+  final double barrierOpacity;
 
   @override
   JustTheTooltipState<OverlayEntry> createState() =>
@@ -644,7 +648,7 @@ abstract class JustTheTooltipState<T> extends State<JustTheInterface>
 
   Widget _createBackdrop() {
     return Container(
-      color: Colors.black.withOpacity(0.65),
+      color: Colors.black.withOpacity(widget.barrierOpacity),
     );
   }
 
