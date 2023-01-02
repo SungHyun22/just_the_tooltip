@@ -644,7 +644,7 @@ abstract class JustTheTooltipState<T> extends State<JustTheInterface>
 
   Widget _createBackdrop() {
     return Container(
-      color: Colors.black.withOpacity(0.5),
+      color: Colors.black.withOpacity(0.2),
     );
   }
 
